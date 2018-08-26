@@ -21,6 +21,7 @@
     <string name="wave_flavour_title">Flavour</string>
     <string name="wave_release_type_title">Release type</string>
     <string name="wave_maintainer_title">Maintainer</string>
+    <string name="build_date">Build date</string>
 
     <!-- Mobile network setting screen, summary of Mobile data switch preference when the network
          is unavailable, the preference selection will be disabled. [CHAR LIMIT=NONE] -->
