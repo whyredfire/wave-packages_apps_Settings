@@ -28,7 +28,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragment;
 
 import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
@@ -97,6 +97,6 @@ public class CutoutFragment extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return -1;
+        return MetricsEvent.WAVE_SETTINGS;
     }
 }
