@@ -34,10 +34,12 @@ public class ColorModePreferenceController extends BasePreferenceController {
         if (mContext.getResources().getBoolean(R.bool.config_show_color_balance_controls)) {
             return AVAILABLE;
         } else {
-            return mContext.getSystemService(ColorDisplayManager.class)
-                .isDeviceColorManaged()
-                && !ColorDisplayManager.areAccessibilityTransformsEnabled(mContext) ?
-                AVAILABLE : DISABLED_FOR_USER;
+            final int[] availableColorModes = mContext.getResources().getIntArray(
+                    com.android.internal.R.array.config_availableColorModes);
+            return availableColorModes.length == 0 ? UNSUPPORTED_ON_DEVICE :
+                    mContext.getSystemService(ColorDisplayManager.class).isDeviceColorManaged()
+                    && !ColorDisplayManager.areAccessibilityTransformsEnabled(mContext) ?
+                    AVAILABLE : DISABLED_FOR_USER;
         }
     }
 
