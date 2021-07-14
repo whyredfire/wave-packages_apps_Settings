@@ -31,14 +31,18 @@ public class ColorModePreferenceController extends BasePreferenceController {
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getSystemService(ColorDisplayManager.class)
+        return AVAILABLE; /* mContext.getSystemService(ColorDisplayManager.class)
                 .isDeviceColorManaged()
                 && !ColorDisplayManager.areAccessibilityTransformsEnabled(mContext) ?
-                AVAILABLE : DISABLED_FOR_USER;
+                AVAILABLE : DISABLED_FOR_USER; */
     }
 
     @Override
     public CharSequence getSummary() {
+        if (!getColorDisplayManager().isDeviceColorManaged()) {
+            return mContext.getText(R.string.color_mode_balance_summary);
+        }
+
         final int colorMode = getColorDisplayManager().getColorMode();
         if (colorMode == ColorDisplayManager.COLOR_MODE_AUTOMATIC) {
             return mContext.getText(R.string.color_mode_option_automatic);
