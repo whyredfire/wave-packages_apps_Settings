@@ -16,6 +16,7 @@
 
 package com.android.settings.wave.fragments;
 
+import android.app.settings.SettingsEnums;
 import android.os.Bundle;
 import android.provider.Settings;
 
@@ -75,6 +76,6 @@ public class Statusbar extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return -1;
+        return SettingsEnums.DISPLAY;
     }
 }

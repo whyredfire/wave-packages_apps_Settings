@@ -168,7 +168,8 @@
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 
     <!-- Network traffic -->
-    <string name="traffic_title">Traffic indicators</string>
+    <string name="network_traffic_title">Traffic indicators</string>
+    <string name="network_traffic_summary">Enable or disable network speed indicators</string>
     <string name="network_traffic_sb_state_title">Show net speed in statusbar</string>
     <string name="network_traffic_esb_state_title">Show net speed in expanded statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net speed autohide threshold (KB/s)</string>
