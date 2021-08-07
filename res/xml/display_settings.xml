@@ -93,7 +93,8 @@
             android:fragment="com.android.settings.display.CutoutFragment"
             android:icon="@drawable/ic_settings_notch_display"
             settings:controller="com.android.settings.display.CutoutPreferenceController"
-            android:title="@string/cutout_main" />
+            android:title="@string/cutout_main"
+            android:summary="@string/cutout_main_summary" />
 
         <SwitchPreference
             android:key="show_operator_name"
