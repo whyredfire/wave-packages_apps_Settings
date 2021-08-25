@@ -30,4 +30,7 @@
     <!-- Screen off FOD -->
     <bool name="config_supportScreenOffFod">false</bool>
 
+    <!-- Whether to show color balance controls in display settings -->
+    <bool name="config_show_color_balance_controls">true</bool>
+
 </resources>
