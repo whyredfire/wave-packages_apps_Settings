@@ -54,6 +54,13 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController" />
 
     <Preference
+        android:fragment="com.android.settings.fuelgauge.smartcharging.SmartChargingSettings"
+        android:key="smart_charging_key"
+        android:title="@string/smart_charging_title"
+        android:icon="@drawable/ic_optimized_charging"
+	android:summary="@string/smart_charging_summary" />
+
+    <Preference
         android:key="last_full_charge"
         android:title="@string/battery_last_full_charge"
         android:icon="@drawable/ic_last_full_charge"
@@ -71,13 +78,6 @@
         android:title="@string/battery_temp"
         android:icon="@drawable/ic_battery_temp"
         android:selectable="false" />
-
-    <Preference
-        android:fragment="com.android.settings.fuelgauge.smartcharging.SmartChargingSettings"
-        android:key="smart_charging_key"
-        android:title="@string/smart_charging_title"
-        android:summary="@string/smart_charging_summary"
-        settings:allowDividerAbove="true" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
